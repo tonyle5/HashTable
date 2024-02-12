@@ -1,0 +1,251 @@
+Welcome to Restaurant Manager program!
+This program will help you keeping track of restaurant wait list.
+
+10 group(s) added to the queue.
+10 customer(s) added to the stack.
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+1
+Enter the group name: PCC Student
+Enter the number of people: a
+Please enter a valid number!
+Enter the number of people: -1
+Please enter a valid number!
+Enter the number of people: 20
+Is anyone who needs special seating? (0: No, 1: Yes) 1
+Enter the information about any requirements: Please prepare a high chair.
+Would the group like to receive coupons and other promotional materials? (0: No, 1: Yes) 1
+Enter full name: Olivia Bennett
+Enter email: bennett.olivia@gmail.com
+
+Displaying 11 group(s):
+
+1. Business Conference;50;1;wheel chair;0;;
+2. Family Picnic;20;0;;0;;
+3. Wedding Party;100;1;High chair;1;Sarah White;sarah.white@example.com
+4. Team Building Workshop;30;0;;1;James Miller;james.m@example.com
+5. Friends Night Out;15;1;High chair;0;;
+6. Tech Seminar;80;1;High chair;1;Michael Brown;michael.b@example.com
+7. School Reunion;40;0;;0;;
+8. Product Launch;60;1;High chair;1;Daniel Smith;daniel.s@example.com
+9. Book Club Meeting;25;0;;1;Olivia Jones;olivia.j@email.com
+10. Birthday Celebration;10;1;High chair;0;;
+11. PCC Student;20;1;Please prepare a high chair.;1;Olivia Bennett;bennett.olivia@gmail.com
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+2
+
+Displaying 10 group(s):
+
+1. Family Picnic;20;0;;0;;
+2. Wedding Party;100;1;High chair;1;Sarah White;sarah.white@example.com
+3. Team Building Workshop;30;0;;1;James Miller;james.m@example.com
+4. Friends Night Out;15;1;High chair;0;;
+5. Tech Seminar;80;1;High chair;1;Michael Brown;michael.b@example.com
+6. School Reunion;40;0;;0;;
+7. Product Launch;60;1;High chair;1;Daniel Smith;daniel.s@example.com
+8. Book Club Meeting;25;0;;1;Olivia Jones;olivia.j@email.com
+9. Birthday Celebration;10;1;High chair;0;;
+10. PCC Student;20;1;Please prepare a high chair.;1;Olivia Bennett;bennett.olivia@gmail.com
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+3
+The first group in the queue:
+Family Picnic;20;0;;0;;
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+4
+Displaying 10 group(s):
+
+1. Family Picnic;20;0;;0;;
+2. Wedding Party;100;1;High chair;1;Sarah White;sarah.white@example.com
+3. Team Building Workshop;30;0;;1;James Miller;james.m@example.com
+4. Friends Night Out;15;1;High chair;0;;
+5. Tech Seminar;80;1;High chair;1;Michael Brown;michael.b@example.com
+6. School Reunion;40;0;;0;;
+7. Product Launch;60;1;High chair;1;Daniel Smith;daniel.s@example.com
+8. Book Club Meeting;25;0;;1;Olivia Jones;olivia.j@email.com
+9. Birthday Celebration;10;1;High chair;0;;
+10. PCC Student;20;1;Please prepare a high chair.;1;Olivia Bennett;bennett.olivia@gmail.com
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+9
+Olivia Bennett;bennett.olivia@gmail.com
+Daniel Smith;daniel.s@example.com
+Michael Brown;michael.b@example.com
+James Miller;james.m@example.com
+Sarah White;sarah.white@example.com
+Olivia Jones;olivia.j@email.com
+Olivia Jones;olivia.j@email.com
+Daniel Smith;daniel.s@example.com
+Michael Brown;michael.b@example.com
+James Miller;james.m@example.com
+Sarah White;sarah.white@example.com
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+5
+This customer was removed from the stack:
+Olivia Bennett;bennett.olivia@gmail.com
+The customer information was written to file.
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+6
+Displaying the most recent customer:
+Daniel Smith;daniel.s@example.com
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+7
+The stack contains 10 customers.
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+8
+The stack is not empty.
+
+Pick an option from below:
+
+1. Add a new group to the queue
+2. Remove the first group from the queue
+3. Peek at the first group in queue
+4. Display the wait list
+
+5. Pop the most recent customer from the stack
+6. Peek at the most recent customer from the stack
+7. Get the size of the customer stack
+8. Check if the customer stack is empty
+9. Display the customer stack
+
+10. Quit
+
+11
+Please choose the option from 1 to 10!
+a
+Please choose the option from 1 to 10!
+10
+
+Thank you for using the program!!

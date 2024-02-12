@@ -1,0 +1,39 @@
+Project 2 Efficiency Review Write-up
+Author: Tony Le
+Date: 01/29/2024
+
+1) How well did the data structure selected perform for the assigned application?
+
+The circular linked list for the Queue ADT and the dynamically allocated array
+for the Stack ADT, performed well for the assigned application. The circular
+linked list is sufficient for managing the queue of groups waiting for tables,
+making enqueue and dequeue easier. On the other hand, the dynamic array in the
+Stack ADT efficiently handled the storage of customers interested in
+promotional materials, offering fast push and pop operations.
+
+2) Would a different data structure work better? If so, which one and why...
+
+For the Queue ADT, the circular linked list was appropriate for enqueue and
+dequeue operations.
+
+For the Stack ADT, the dynamically allocated array was suitable. However, the
+linked list could also be explored since the application only need to operate
+on the top element.
+
+3) What was efficient about your design and use of the data structure?
+
+The design carefullly considerated the specific requirements of each data
+structure. The circular linked list in the Queue efficiently managed the order
+of arrival. For the Stack, the dynamic array efficiently handled push and pop
+operations.
+
+4) What was not efficient?
+
+One inefficiency in the implementation was the lack of a check for customer
+duplication in the stack. Without this check, it is possible for the same
+customer or group to be pushed multiple times in the stack.
+5) What would you do differently if you had more time to solve the problem?
+
+If more time were available, I would like to implement a check for customer
+duplication.
+

@@ -1,0 +1,49 @@
+Project 2 design write-up
+Author: Tony Le
+Date  : 01/29/2024
+
+QUEUE ADT:
+1. Data Structure:
+- The Queue is implemented using a circular linked list.
+- Nodes contains information about each group in line, including name, group
+size, special seating needs, and interest in promotional materials.
+2. Operations:
+- A default constructor
+- A destructor
+- Enqueue: Adds a group to the end of the queue.
+- Dequeue: Removes the group from the front of the queue when they get seated.
+- Peek: Allows viewing the information of the group at the front without
+  removing them.
+- Display: Displays the waiting list along with the number in line
+- A function loads group data from a file into the queue. If there are any
+    groups would like to receive coupons and other promotional materials, they
+    are added to the stack
+- A function writes group data from the queue to a file
+3. Special Cases:
+- Circular nature of the linked list: Manage pointers to ensure
+  correct navigation and avoid memory leaks.
+
+- Enqueue and Dequeue: Consider scenarios where the queue is empty or full.
+
+STACK ADT:
+1. Data Structure:
+- The Stack is implemented using a dynamically allocated array.
+- Each element in the array represents a customer interested in promotional
+materials, containing their full name and email address.
+2. Operations:
+- A default constructor receives the size of the array from the client
+    program
+- A copy constructor
+- A Destructor
+- An assignment operator
+- Overloads the << operator to display Stack.
+- A function adds a customer to the stack.
+- A function removes the top customer from the stack.
+- A function views the top customer without removing them.
+- A function get the number of customers in the stack.
+- A function checks if the stack is empty.
+- A function loads customer data from a file into the stack.
+- A function writes customer data from the stack to a file.
+- A function destroys the stack. This function is private
+- A function expands the stack when it reaches its capacity.
+- A function deletes the stack recursively.
