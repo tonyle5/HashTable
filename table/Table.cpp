@@ -66,7 +66,29 @@ int Table::loadData(const char* fileName) {
 }
 
 // Writes data from the table to a file.
-bool Table::writeData(const char* fileName) const {}
+bool Table::writeData(const char* fileName) const {
+  ofstream outFile;
+  outFile.open(fileName);
+
+  if (!outFile) {
+    return false;
+  }
+
+  outFile << "Topic name; Website address; Summary; Review; Rating" << endl;
+
+  for (int i = 0; i < this->capacity; i++) {
+    Node* temp = this->aTable[i];
+
+    while (temp) {
+      temp->data->printInformation(outFile);
+      temp = temp->next;
+    }
+  }
+
+  outFile.close();
+
+  return true;
+}
 
 // Initialize the table's data.
 void Table::init() {
@@ -80,7 +102,19 @@ void Table::init() {
 }
 
 // Calculates a hash value for the given string.
-int Table::hash(const char* key) const {}
+int Table::hash(const char* key) const {
+  int val = 0;
+  const char* temp = key;
+  int i = 1;
+
+  while (*temp != '\0') {
+    val += *temp * i;
+    i++;
+    temp++;
+  }
+
+  return val % capacity;
+}
 
 // Destroys the table.
 void Table::destroy() {
