@@ -101,10 +101,9 @@ void Website::setRating(unsigned short int rating) {
 }
 
 // Initializes the website's properties.
-void Website::init(const char* topic = nullptr, const char* address = nullptr,
-                   const char* summary = nullptr,
-                   const char* review = nullptr,
-                   unsigned short int rating = 0) {
+void Website::init(const char* topic, const char* address,
+                   const char* summary, const char* review,
+                   unsigned short int rating) {
   this->setTopic(topic);
   this->setAddress(address);
   this->setSummary(summary);

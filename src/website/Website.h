@@ -9,22 +9,22 @@
 
 class Website {
   private:
-    char* topic;
+    char* topic = nullptr;
 
     /**
      * URL of the website
      */
-    char* address;
+    char* address = nullptr;
 
     /**
      * Summary of the website
      */
-    char* summary;
+    char* summary = nullptr;
 
     /**
      * Review about the website
      */
-    char* review;
+    char* review = nullptr;
 
     /**
      * Rating of the website (1-5 stars – 1 being not very useful, 5 being

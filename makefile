@@ -1,17 +1,34 @@
-all: program
+#The executable file is in the build directory. The source files are in the src directory.
 
-program: main.o Table.o myUtil.o
-	g++ -g -Wall -std=c++17 main.o RestaurantQueue.o Group.o PersonalInfo.o Stack.o myUtil.o -o program
+SRC_DIR = src
+BUILD_DIR = build
 
-main.o: main.cpp
-	g++ -g -c -std=c++17 -Wall main.cpp -o main.o
+CXX = g++
+CXXFLAGS = -g -Wall -std=c++17
 
-Table.o: Table.cpp
-	g++ -g -c -std=c++17 -Wall Table.cpp -o Table.o
+# List of source files
+SRCS = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(SRC_DIR)/myUtil/*.cpp) $(wildcard $(SRC_DIR)/table/*.cpp) $(wildcard $(SRC_DIR)/website/*.cpp)
 
-myUtil.o: myUtil/myUtil.cpp
-	g++ -g -c -std=c++17 -Wall myUtil/myUtil.cpp -o myUtil.o
+# Generate a list of object files by replacing .cpp with .o
+OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
+
+.PHONY: all clean copyData
+
+# The default target
+all: program copyData
+
+# Rule to build the final executable
+program: $(OBJS)
+	$(CXX) $(CXXFLAGS) $^ -o $(BUILD_DIR)/program
+
+# Rule to build object files
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Rule to copy *.txt file(s) to build directory
+copyData: $(SRC_DIR)/websites.txt
+	cp $< $(BUILD_DIR)
 
 clean:
-	rm -f *.o
-	rm -f ./program
+	rm -rf $(BUILD_DIR)

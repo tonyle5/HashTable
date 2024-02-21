@@ -40,4 +40,3 @@ void setCharArr(const char*& srcArr, char*& destArr);
 #include "myUtil.inl"
 
 #endif
-

@@ -10,6 +10,11 @@ file(GLOB SOURCES "*.cpp")
 # Include directories
 include_directories(include)
 
+# Add the subdirectories
+add_subdirectory(myUtil)
+add_subdirectory(table)
+add_subdirectory(website)
+
 # Create the executable
 add_executable(my_project ${SOURCES})
 
@@ -25,3 +30,6 @@ set(DEST_TXT_DIR ${CMAKE_BINARY_DIR})
 
 # Use the file(COPY ...) command to copy the .txt files to the build directory
 file(COPY ${TXT_FILES} DESTINATION ${DEST_TXT_DIR})
+
+# Link the libraries
+target_link_libraries(my_project myUtil Table Website)

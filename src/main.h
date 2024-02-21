@@ -9,6 +9,7 @@
 #define MAIN_H
 
 #include "myUtil/myUtil.h"
+#include "table/Table.h"
 
 const char* DATA_FILE = "websites.txt";
 
@@ -41,6 +42,6 @@ void displayMenu();
  * @param option The option that the user chooses.
  * @return void
  */
-void exeOption(int option);
+void exeOption(int option, Table& hashTable);
 
 #endif

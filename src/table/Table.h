@@ -73,7 +73,7 @@ class Table {
      *                            topic keyword.
      * @return                    True if there is a match, false otherwise.
      */
-    bool retrieve(const char* topicKeyword, Website results[],
+    bool retrieve(const char* topicKeyword, Website* results[],
                   int& totalResults) const;
 
     /**
@@ -84,14 +84,14 @@ class Table {
      * @param rating        The rating to modify.
      * @return              void
      */
-    void edit(const char* topicKeyword, const char* address,
-                const char* review, unsigned short int rating);
+    void edit(const char* topicKeyword, const char* review,
+              unsigned short int rating);
 
     /**
      * Remove all websites with a 1 star rating.
      * @return The removed websites.
      */
-    const Website* removeOneStar();
+    void removeOneStar();
 
     /**
      * Display website matches based on the topic keyword.
@@ -136,19 +136,6 @@ class Table {
 
   private:
     /**
-     * Initialize the table's data.
-     */
-    void init();
-
-    /**
-     * Calculates a hash value for the given string.
-     *
-     * @param key The string to calculate the hash for.
-     * @return    The computed hash value.
-     */
-    int hash(const char* key) const;
-
-    /**
      * Destroys the table.
      *
      * @return void
@@ -161,6 +148,28 @@ class Table {
      * @return void
      */
     void destroyChain(Node*& head);
+
+    /**
+     * Calculates a hash value for the given string.
+     *
+     * @param key The string to calculate the hash for.
+     * @return    The computed hash value.
+     */
+    int hash(const char* key) const;
+
+    /**
+     * Initialize the table's data.
+     */
+    void init();
+
+    /**
+     * Removes a node from the chain.
+     *
+     * @param curNode   The current node to remove.
+     * @param prevNode  The previous node before the current node.
+     * @return          void
+     */
+    void removeNode(Node*& curNode, Node*& prevNode);
 };
 
 #endif
