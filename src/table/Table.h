@@ -78,20 +78,22 @@ class Table {
 
     /**
      * Modify the review and rating for a particular topic and website match.
+     *
      * @param topicKeyword  The topic keyword to search for.
      * @param address       The address of the website.
      * @param review        The review to modify.
      * @param rating        The rating to modify.
-     * @return              void
+     * @return              True if there is a match, false otherwise.
      */
-    void edit(const char* topicKeyword, const char* review,
+    bool edit(const char* topicKeyword, const char* review,
               unsigned short int rating);
 
     /**
      * Remove all websites with a 1 star rating.
-     * @return The removed websites.
+     * @return True if there is a website with a 1 star rating, false
+     * otherwise.
      */
-    void removeOneStar();
+    bool removeOneStar(Website* results[], int& totalResults);
 
     /**
      * Display website matches based on the topic keyword.

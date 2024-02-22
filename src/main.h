@@ -40,8 +40,42 @@ void displayMenu();
  * This function executes the option that the user chooses.
  *
  * @param option The option that the user chooses.
+ * @param hashTable The instance of table ADT.
  * @return void
  */
 void exeOption(int option, Table& hashTable);
+
+/**
+ * Prompts for the website's information and adds a new website into the hash
+ * table.
+ *
+ * @param hashTable The instance of table ADT.
+ * @return void
+ */
+void insertWebsite(Table& hashTable);
+
+/**
+ * Prompts for the keyword and displays all websites based on that keyword.
+ *
+ * @param hashTable The instance of table ADT.
+ * @return void
+ */
+void retrieve(Table& hashTable);
+
+/**
+ * Modifies the review and rating for a particular topic and website match.
+ *
+ * @param hashTable The instance of table ADT.
+ * @return void
+ */
+void edit(Table& hashTable);
+
+/**
+ * Removes all websites with a 1 star rating.
+ *
+ * @param hashTable The instance of table ADT.
+ * @return void
+ */
+void removeOneStar(hashTable);
 
 #endif

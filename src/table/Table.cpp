@@ -33,10 +33,10 @@ void Table::insert(const Website& website) {
 bool Table::retrieve(const char* topicKeyword, Website* results[],
                      int& totalResults) const {
   int index = this->hash(topicKeyword);
+  totalResults = 0;
 
   if (this->aTable[index]) {
     Node* temp = this->aTable[index];
-    totalResults = 0;
 
     while (temp) {
       if (strstr(temp->data->getTopic(), topicKeyword) != nullptr) {
@@ -46,41 +46,46 @@ bool Table::retrieve(const char* topicKeyword, Website* results[],
 
       temp = temp->next;
     }
-
-    return true;
   }
 
-  return false;
+  return totalResults != 0;
 }
 
 // Modify the review and rating for a particular topic and website match.
-void Table::edit(const char* topicKeyword, const char* review,
+bool Table::edit(const char* topicKeyword, const char* review,
                  unsigned short int rating) {
   int index = this->hash(topicKeyword);
+  bool isFound = false;
 
   if (this->aTable[index]) {
     Node* temp = this->aTable[index];
-    bool isFound = false;
 
     while (temp && !isFound) {
       if (strstr(temp->data->getTopic(), topicKeyword) != nullptr) {
         temp->data->setReview(review);
         temp->data->setRating(rating);
+        isFound = true;
       }
 
       temp = temp->next;
     }
   }
+
+  return isFound;
 }
 
 // Remove all websites with a 1 star rating.
-void Table::removeOneStar() {
+bool Table::removeOneStar(Website* results[], int& totalResults) {
+  totalResults = 0;
+
   for (int i = 0; i < this->capacity; i++) {
     Node* temp = this->aTable[i];
     Node* prev = nullptr;
 
     while (temp) {
       if (temp->data->getRating() == 1) {
+        results[totalResults] = temp->data;
+        totalResults++;
         this->removeNode(temp, prev);
       }
 
