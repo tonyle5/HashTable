@@ -76,6 +76,6 @@ void edit(Table& hashTable);
  * @param hashTable The instance of table ADT.
  * @return void
  */
-void removeOneStar(hashTable);
+void removeOneStar(Table& hashTable);
 
 #endif

@@ -122,7 +122,7 @@ void insertWebsite(Table& hashTable) {
 // Prompts for the keyword and displays all websites based on that keyword.
 void retrieve(Table& hashTable) {
   char* topicKeyword = nullptr;
-  Website* results;
+  Website** results;
   int totalResults = 0;
 
   cout << "Enter the topic keyword: " << endl;
@@ -163,8 +163,8 @@ void edit(Table& hashTable) {
 }
 
 // Removes all websites with a 1 star rating.
-void removeOneStar(hashTable) {
-  Website* results;
+void removeOneStar(Table& hashTable) {
+  Website** results;
   int totalResults = 0;
 
   if (hashTable.removeOneStar(results, totalResults)) {
